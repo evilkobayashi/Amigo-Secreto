@@ -1,0 +1,184 @@
+:root {
+    --color-primary: #333333;      /* Cinza escuro para fundo principal */
+    --color-secondary: #EDEDED;    /* Cinza claro para fundo secundário */
+    --color-tertiary: #999999;     /* Cinza médio para elementos */
+    --color-button: #666666;       /* Cinza intermediário para botões */
+    --color-button-hover: #4D4D4D; /* Cinza mais escuro para hover */
+    --color-text: #2B2B2B;         /* Quase preto para texto */
+    --color-white: #FFFFFF;        /* Branco puro mantido */
+    --color-accent: #808080;       /* Cinza médio para detalhes */
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: var(--color-primary);
+}
+
+/* Seção de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Contêineres de entrada e botão */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.input-name {
+    width: 70%;
+    padding: 12px 15px;
+    border: 2px solid var(--color-tertiary);
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    background-color: var(--color-white);
+    transition: border-color 0.3s ease;
+}
+
+.input-name:focus {
+    outline: none;
+    border-color: var(--color-button);
+}
+
+.button-container {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos de botão */
+button {
+    padding: 12px 25px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    border-radius: 0 25px 25px 0;
+    padding: 12px 20px;
+}
+
+.button-add:hover {
+    background-color: var(--color-button);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+ul li {
+    background-color: var(--color-white);
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-list {
+    margin-top: 20px;
+    color: var(--color-accent);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Botão de sortear */
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 30px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    gap: 10px;
+}
+
+.button-draw img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Transforma ícone em branco */
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
